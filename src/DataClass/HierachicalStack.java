@@ -14,7 +14,7 @@ import javax.script.ScriptException;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class HierachicalStack {
 

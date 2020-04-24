@@ -19,7 +19,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class Utils {
 

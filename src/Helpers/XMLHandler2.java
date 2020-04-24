@@ -23,7 +23,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class XMLHandler2 extends DefaultHandler {
 

@@ -7,7 +7,7 @@ package Helpers;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public abstract class Constantes {
     public final static String PC_EDGE = "PC"; 

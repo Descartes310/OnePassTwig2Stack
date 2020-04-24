@@ -23,7 +23,7 @@ import sun.util.logging.resources.logging;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class Twig2Stack {
  

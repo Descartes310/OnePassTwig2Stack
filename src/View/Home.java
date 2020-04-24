@@ -33,7 +33,7 @@ import xmleditorkit.XMLEditorKit;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class Home extends javax.swing.JFrame {
 

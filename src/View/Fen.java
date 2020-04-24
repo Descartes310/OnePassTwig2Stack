@@ -13,7 +13,7 @@ import javax.swing.tree.DefaultTreeModel;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class Fen extends javax.swing.JFrame {
 

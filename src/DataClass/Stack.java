@@ -9,7 +9,7 @@ import java.util.ArrayList;
  
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  * @param <T>
  */
 public class Stack<T> {

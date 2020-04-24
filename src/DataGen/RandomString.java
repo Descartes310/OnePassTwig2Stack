@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Random;
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class RandomString {
 

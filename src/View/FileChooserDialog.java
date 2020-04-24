@@ -13,7 +13,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class FileChooserDialog extends javax.swing.JDialog {
 

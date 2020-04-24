@@ -11,7 +11,7 @@ import java.util.Map;
  
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class DocElementPref extends DocElement {
 

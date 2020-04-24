@@ -7,7 +7,7 @@ package DataClass;
  
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class ChildResults {
 

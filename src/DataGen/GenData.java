@@ -13,7 +13,7 @@ import Helpers.Constantes;
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class GenData {
 

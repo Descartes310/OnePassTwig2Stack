@@ -5,38 +5,28 @@
  */
 package onepasstwig2stack;
 
-import DataClass.DocElement;
-import DataClass.DocElementPref;
-import DataClass.GTPResult;
-import DataClass.HierachicalStack;
-import DataClass.SOT;
-import DataClass.Stack;
-import DataClass.StackTree;
-import DataClass.XmlDocument;
-import DataGen.GenData;
-import Helpers.Utils;
-import View.Home;
-import java.io.File;
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadMXBean;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-import javax.swing.UnsupportedLookAndFeelException;
+import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+
+import org.w3c.dom.DOMException;
+import org.xml.sax.SAXException;
+
+
 
 /**
  *
- * @author patrik
+ * @author Descartes Fowo
  */
 public class OnePasstwig2Stack {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    //public static void main(String[] args) {
         /*
             XmlDocument xmlDocument= new XmlDocument(new DocElement("a1"));
             XmlDocument d2= new XmlDocument(new DocElement("b1"));
@@ -157,18 +147,40 @@ public class OnePasstwig2Stack {
             }
         };
         t3.start(); */
-        Thread t3 = new Thread() {
-            public void run() {
-                HierachicalStack Hs = GenData.generateHierachicalStackForDataTest2DB();
-                try {
-                    Home fen = new Home(Hs, "testPref.xml");
-                    fen.setVisible(true);
-                } catch (UnsupportedLookAndFeelException ex) {
-                    Logger.getLogger(OnePasstwig2Stack.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }; 
-        t3.start();
-    }
+//        Thread t3 = new Thread() {
+//            public void run() {
+//                HierachicalStack Hs = GenData.generateHierachicalStackForDataTest2DB();
+//                System.out.println("\n\n\n Je suis ici putain ! \n\n\n");
+//                try {
+//                    Home fen = new Home(Hs, "testPref.xml");
+//                    fen.setVisible(true);
+//                } catch (UnsupportedLookAndFeelException ex) {
+//                    Logger.getLogger(OnePasstwig2Stack.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//        }; 
+//        t3.start();
+    	 public static void main(String[] args) {
+
+    	      try {
+    	         SAXParserFactory factory = SAXParserFactory.newInstance();
+    	         SAXParser parser = factory.newSAXParser();
+    	         
+    	         parser.parse("book.xml", new MyXMLHandler());
+
+    	      } catch (DOMException e) {
+    	         e.printStackTrace();
+    	      } catch (ParserConfigurationException e) {
+    	         e.printStackTrace();
+    	      } catch (TransformerFactoryConfigurationError e) {
+    	         e.printStackTrace();
+    	      } catch (SAXException e) {
+    	         e.printStackTrace();
+    	      } catch (IOException e) {
+    	         // TODO Auto-generated catch block
+    	         e.printStackTrace();
+    	      }
+    	   }
+    //}
 
 }
